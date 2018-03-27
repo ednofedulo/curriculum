@@ -1,0 +1,87 @@
+@page {
+    size: A4;
+}
+
+section {
+    margin-bottom: 1em;
+}
+
+#header .name {
+    text-align: center;
+    font-size: xx-large;
+    height: 110px;
+    line-height: 110px;
+}
+
+.picture {
+    background-image: url('circle_me_small.jpg');
+    background-repeat: no-repeat;
+    height: 110px;
+}
+
+#contacts {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+#contacts div {
+    text-align: center;
+}
+
+#contacts .header {
+    color: #999999;
+    font-style: italic;
+}
+
+#academic {
+    display: grid;
+    grid-template-columns: auto 30%;
+    grid-column-gap: 10px;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: 10% auto;
+    grid-template-rows: 110px;
+}
+
+.level-1:before {
+    content: "\2605\2606\2606\2606\2606";
+    position: absolute;
+    font-size: large;
+}
+
+.level-2:before {
+    content: "\2605\2605\2606\2606\2606";
+    position: absolute;
+    font-size: large;
+}
+
+.level-3:before {
+    content: "\2605\2605\2605\2606\2606";
+    position: absolute;
+    font-size: large;
+}
+
+.level-4:before {
+    content: "\2605\2605\2605\2605\2606";
+    position: absolute;
+    font-size: large;
+}
+
+.level-5:before {
+    content: "\2605\2605\2605\2605\2605";
+    position: absolute;
+    font-size: large;
+}
+
+@media print {
+    .no-print,
+    .no-print * {
+        display: none !important;
+    }
+    .picture {
+        background-image: url('') !important;
+        width: 0px !important;
+    }
+}
